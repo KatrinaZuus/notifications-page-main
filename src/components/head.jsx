@@ -34,8 +34,15 @@ const Container = styled.div`
         //ელემენტს როცა ვუწერ rem-ში  ინსპექტში მიშლის 62,5% 
         //და მგონია რომ არასწორ ზომას წერს
         font-size: 1.4rem;
-        font-weight: 500
+        font-weight: 500;
+        cursor: pointer;
+    
+        &:hover{
+        color: #0a327b;
+        }
     }
+
+    
 
   /* @media (min-width: 90rem){
         
@@ -54,6 +61,10 @@ const Notification = styled.div`
     /* font-size: 2rem; */
     font-weight: 800;
     }
+
+
+        
+       
 
     & div {
         width: 3.2rem;

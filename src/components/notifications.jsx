@@ -28,9 +28,9 @@ export default function Notifications({markall, setMarkall, count, setCount}) {
                 <img src={item.userImage} alt="" />
                 <div>
                     <AvatarNotification>
-                        <AvatarName markall = {markall} setMarkall = {setMarkall}>{item.name} 
-                        <span>{item.notify} 
-                        <span className="related-Page">{item.relatedPage} 
+                        <AvatarName className="avatname" markall = {markall} setMarkall = {setMarkall}>{item.name} 
+                        <span> {item.notify} 
+                        <span className="related-Page"> {item.relatedPage} 
                         <div className="circle" style = {active+1 !== item.id ? {display: "display-block"} : {display: "none"}}></div></span></span></AvatarName>
                        
                     </AvatarNotification>
@@ -86,6 +86,9 @@ const AvatarNotification = styled.div`
     flex-direction: row;
     align-items: center;
 
+    /* & .avatname {
+        cursor: pointer;
+    } */
     `
 
 const AvatarName = styled.p `
@@ -102,7 +105,13 @@ const AvatarName = styled.p `
     & .related-Page {
         font-weight: bold;
         color: #5e6778;
+        cursor: pointer;
+    &:hover {
+        color: #0a327b;
     }
+    }
+
+    
 
     & .circle {
         width: 0.8rem;
