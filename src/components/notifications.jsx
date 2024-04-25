@@ -6,10 +6,15 @@ import { useState } from "react";
 export default function Notifications({markall, setMarkall, count, setCount}) {
 
     const [active, setActive] = useState()
-    // const [message, setMessage] = useState()
-    
-    console.log(count)
-    
+
+    function checkCount() {
+        if (count > 0){
+            setCount(count-1)
+        } else return setCount(0)
+    }
+
+
+   
 
     
     return (
@@ -20,22 +25,25 @@ export default function Notifications({markall, setMarkall, count, setCount}) {
             markall = {markall} setMarkall = {setMarkall}
             count = {count} setCount = {setCount}
 
-            key={index}  
-            onClick={()=>setActive(index) & setCount(count-1)}
+            key={index}
+            
+            onClick={()=>setActive(index) & checkCount()}
             style = {active+1 == item.id ? {backgroundColor: "#fff"} : {backgroundColor: "none"}}
             
             > 
                 <img src={item.userImage} alt="" />
                 <div>
-                    <AvatarNotification>
-                        <AvatarName className="avatname" markall = {markall} setMarkall = {setMarkall}>{item.name} 
-                        <span> {item.notify} 
+                    <AvatarNotification markall = {markall} setMarkall = {setMarkall}>
+                        <span className="avatname"> {item.name}
+                        <span> { item.notify }
                         <span className="related-Page"> {item.relatedPage} 
-                        <div className="circle" style = {active+1 !== item.id ? {display: "display-block"} : {display: "none"}}></div></span></span></AvatarName>
-                       
+                        </span></span></span>
+                        
+                        
+                        <div className="circle" style = {active+1 !== item.id ? {display: "display-block"} : {display: "none"}}></div>
                     </AvatarNotification>
 
-                    <p>{item.time}</p>
+                    <p className="time">{item.time}</p>
                     <ContainerMessage markall = {markall} setMarkall = {setMarkall}
                         style = {item.message == "" ? {display: "none"} : {display: "block"} 
                         && active+1 == item.id ? {backgroundColor: "#fff"} : {backgroundColor: "none"}} 
@@ -49,7 +57,12 @@ export default function Notifications({markall, setMarkall, count, setCount}) {
        ))}
        </MainContainer>
 
+       
+
 )}
+
+
+
 
 const MainContainer = styled.div`
     display: flex;
@@ -57,7 +70,6 @@ const MainContainer = styled.div`
     justify-content: center;
     width: 100%;
 `
-
 const ContainerNotification = styled.div`
     background-color: ${props=>props.markall ? "#fff" : "#f7fafd"};
     padding: 1.6rem 2.6rem 1.6rem 1.6rem;
@@ -76,25 +88,17 @@ const ContainerNotification = styled.div`
     & .related-Photo {
         margin-left: 30%;
     } 
+
+    & .time {
+    color:  #939cad;
+    margin-top: 0.4rem;
+}
 `
-
-
-
-
 const AvatarNotification = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    /* & .avatname {
-        cursor: pointer;
-    } */
-    `
-
-const AvatarName = styled.p `
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1c202b;
+    font-size: 1.6rem;
 
     & span {
         font-weight: 500;
@@ -108,10 +112,7 @@ const AvatarName = styled.p `
         cursor: pointer;
     &:hover {
         color: #0a327b;
-    }
-    }
-
-    
+    }}
 
     & .circle {
         width: 0.8rem;
@@ -122,7 +123,27 @@ const AvatarName = styled.p `
         display: ${props=>props.markall ? "none" : "inline-block"};
     }
 
+    .avatname {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #1c202b;
+        cursor: pointer;
+    
+    &:hover {
+        color: #0a327b;
+        
+    }
+}
 `
+
+
+
+
+    
+
+  
+
+
 
 
 const ContainerMessage = styled.div`

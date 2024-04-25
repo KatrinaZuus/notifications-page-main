@@ -3,8 +3,8 @@
         "id": 1,
         "name": "Mark Webber",
         "userImage": "/images/Mark Webber/Oval@3x.png",
-        "notify": "reacted to your recent post",
-        "relatedPage": "My first tournament today!",
+        "notify": " reacted to your recent post",
+        "relatedPage": " My first tournament today!",
         "time": "1m ago",
         "relatedPhoto": "",
         "message": ""
@@ -14,8 +14,8 @@
         "id": 2,
         "name": "Angela Gray",
         "userImage": "/images/Angela Grey/Group 6@3x.png",
-        "notify": "followed you",
-        "relatedPage": "",
+        "notify": " followed you",
+        "relatedPage": " ",
         "time": "5m ago",
         "relatedPhoto": "",
         "message": ""
@@ -23,10 +23,10 @@
 
     {
         "id": 3,
-        "name": "Jacob Thompson",
+        "name": "Jacob Thompson ",
         "userImage": "/images/Jacob Thompson/Oval@3x.png",
-        "notify": "has joined your group",
-        "relatedPage": "Chess Club",
+        "notify": " has joined your group ",
+        "relatedPage": " Chess Club ",
         "time": "1 day ago",
         "relatedPhoto": "",
         "message": ""
@@ -36,8 +36,8 @@
         "id": 4,
         "name": "Rizky Hasanuddin",
         "userImage": "/images/Rizky Hasanuddin/Oval@3x.png",
-        "notify": "sent you a private message",
-        "relatedPage": "",
+        "notify": " sent you a private message",
+        "relatedPage": " ",
         "time": "5 day ago",
         "relatedPhoto": "",
         "message": "Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game."
@@ -47,8 +47,8 @@
         "id": 5,
         "name": "Kimberly Smith",
         "userImage": "/images/Kimberly Smith/Oval@3x.png",
-        "notify": "commentd on your picture",
-        "relatedPage": "",
+        "notify": " commentd on your picture",
+        "relatedPage": " ",
         "time": "1 week ago",
         "relatedPhoto": "/images/photo comment/Rectangle@3x.png",
         "message": ""
@@ -58,8 +58,8 @@
         "id": 6,
         "name": "Nathan Peterson",
         "userImage": "/images/Nathan Peterson/Oval@3x.png",
-        "notify": "reacted to your recent post",
-        "relatedPage": "5 end-game strategies to increase your win rate",
+        "notify": " reacted to your recent post",
+        "relatedPage": " 5 end-game strategies to increase your win rate",
         "time": "2 week ago",
         "relatedPhoto": "",
         "message": ""
@@ -69,8 +69,8 @@
         "id": 7,
         "name": "Anna Kim",
         "userImage": "/images/Anna Kim/Oval@3x.png",
-        "notify": "left the group",
-        "relatedPage": "Chess Club",
+        "notify": " left the group",
+        "relatedPage": " Chess Club",
         "time": "2 week ago",
         "relatedPhoto": "",
         "message": ""
